@@ -6,7 +6,7 @@
 /*   By: slord <slord@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/14 14:53:40 by slord             #+#    #+#             */
-/*   Updated: 2022/08/01 19:31:53 by slord            ###   ########.fr       */
+/*   Updated: 2022/08/02 13:49:37 by slord            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,7 @@ void	trouver_position_m(t_mlx *info)
 		{
 			while (info->m[i][j] != '\n' && info->m[i][j] != '\0')
 			{	
-				if (info->m[i][j] == 'M')
+				if (info->m[i][j] == 'E')
 				{
 					info->monster.x = i;
 					info->monster.y = j;

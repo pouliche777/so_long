@@ -6,7 +6,7 @@
 /*   By: slord <slord@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/27 14:57:18 by slord             #+#    #+#             */
-/*   Updated: 2022/08/01 15:30:20 by slord            ###   ########.fr       */
+/*   Updated: 2022/08/02 13:59:52 by slord            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,13 @@ void	validate_monster_1(t_mlx *info, int nb)
 
 void	move_monster(t_mlx *info, int *pxy, int inc)
 {
-	info->m[info->monster.x][info->monster.y] = '0';
+	if (info->m[info->monster.x][info->monster.y] == 'E')
+	{
+		info->m[info->monster.x][info->monster.y] = 'E';
+		draw_map(info);
+	}
+	else
+		info->m[info->monster.x][info->monster.y] = '0';
 	*pxy = *pxy + inc;
 	info->m[info->monster.x][info->monster.y] = 'M';
 	draw_map(info);

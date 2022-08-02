@@ -2,7 +2,7 @@ S = src/
 O = obj/
 L = libft/
 
-SOURCES = $Sso_long.c $Sfonctions_0.c $Sread_map.c $Screate_map.c $Smonster_move.c $Schecker.c
+SOURCES = $Sso_long.c $Smove.c $Sread_map.c $Screate_map.c $Smonster_move.c $Schecker.c $Schecker_1.c
 
 OBJS = $(SOURCES:$S%=$O%.o)
 

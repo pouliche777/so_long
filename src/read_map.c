@@ -6,7 +6,7 @@
 /*   By: slord <slord@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/12 16:49:25 by slord             #+#    #+#             */
-/*   Updated: 2022/08/01 19:20:59 by slord            ###   ########.fr       */
+/*   Updated: 2022/08/02 15:50:29 by slord            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,18 +24,17 @@ void	read_map(char **argv, t_mlx *info)
 	char	*map_tempo;
 
 	i = 0;
-	map_h = map_height(argv);
-	info->m = malloc(sizeof(char *) * (map_h + 1));
 	fd = open(argv[1], O_RDONLY);
 	if (fd < 0)
 	{
 		printf("Map error : there is no such file");
-		game_over(info, 0);
+		exit(0);
 	}
+	map_h = map_height(argv);
+	info->m = malloc(sizeof(char *) * (map_h + 1));
 	while (map_h > 0)
 	{
 		map_tempo = get_next_line(fd);
-		info->m[i] = malloc(sizeof(char) * ft_strlen(map_tempo) + 1);
 		info->m[i] = map_tempo;
 		i++;
 		map_h--;

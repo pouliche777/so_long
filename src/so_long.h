@@ -6,7 +6,7 @@
 /*   By: slord <slord@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/06 17:14:16 by slord             #+#    #+#             */
-/*   Updated: 2022/08/01 19:59:13 by slord            ###   ########.fr       */
+/*   Updated: 2022/08/02 16:06:23 by slord            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ void	trouver_position_p(t_mlx *info);
 void	trouver_position_m(t_mlx *info);
 int		cheap_random(int s);
 void	find_nb_keys(t_mlx *info);
-void	game_over(t_mlx *info, int exit_code);
+int		game_over(t_mlx *info, int exit_code);
 void	img_init(t_mlx *info);
 void	validate_1(t_mlx *info, int key);
 void	validate_monster_1(t_mlx *info, int nb);
@@ -66,5 +66,7 @@ void	check_map_reactangle(t_mlx *info);
 void	check_no_item(t_mlx *info, char c);
 void	check_doublons(t_mlx *info, char c);
 void	map_checker(t_mlx *info);
+void	check_bad_token(t_mlx *info);
+int		compare_ber(char *path, char *ber);
 
 #endif

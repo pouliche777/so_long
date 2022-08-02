@@ -6,7 +6,7 @@
 /*   By: slord <slord@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/01 15:46:34 by slord             #+#    #+#             */
-/*   Updated: 2022/08/01 20:00:50 by slord            ###   ########.fr       */
+/*   Updated: 2022/08/02 15:53:21 by slord            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,14 +26,14 @@ void	check_walls(t_mlx *info)
 			if (info->m[0][j] != '1')
 			{
 				printf("Map error : Borders of the map MUST be walls.");
-				game_over(info, 1);
+				game_over(info, 0);
 			}
 			j++;
 		}
 		if (info->m[i][j - 1] != '1')
 		{
 			printf("Map error : Borders of the map MUST be walls.");
-			game_over(info, 1);
+			game_over(info, 0);
 		}
 		j = 0;
 		i++;
@@ -51,7 +51,7 @@ void	check_walls_1(t_mlx *info, int i)
 		if (info->m[i - 1][j] != '1')
 		{
 			printf("Map error : Borders of the map MUST be walls.");
-			game_over(info, 1);
+			game_over(info, 0);
 		}
 		j++;
 	}
@@ -75,8 +75,8 @@ void	check_doublons(t_mlx *info, char c)
 				nb_c ++;
 				if (nb_c > 1)
 				{
-					printf("\nMap error:more than 1 exit or player in the map.");
-					game_over(info, 1);
+					printf("Map error:more than 1 exit or player in the map.");
+					game_over(info, 0);
 				}
 			}
 			j++;
@@ -108,8 +108,8 @@ void	check_no_item(t_mlx *info, char c)
 	}
 	if (nb_c == 0)
 	{
-		printf("\nMap error:0 player and/or exit and/or keys in the map.");
-		game_over(info, 1);
+		printf("Map error:0 player and/or exit and/or keys in the map.");
+		game_over(info, 0);
 	}
 }
 
@@ -130,8 +130,8 @@ void	check_map_reactangle(t_mlx *info)
 			j++;
 		if (j != str_len)
 		{
-			printf("\nMap error:the map is not a rectangle");
-			game_over(info, 1);
+			printf("Map error:the map is not a rectangle");
+			game_over(info, 0);
 		}
 		j = 0;
 		i++;
