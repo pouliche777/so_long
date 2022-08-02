@@ -6,7 +6,7 @@
 /*   By: slord <slord@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/11 17:03:47 by slord             #+#    #+#             */
-/*   Updated: 2022/08/01 18:27:24 by slord            ###   ########.fr       */
+/*   Updated: 2022/08/01 20:01:21 by slord            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,4 +89,15 @@ void	game_over(t_mlx *info, int exit_code)
 	}
 	free(info->m);
 	exit(exit_code);
+}
+
+void	map_checker(t_mlx *info)
+{
+	check_walls(info);
+	check_doublons(info, 'E');
+	check_doublons(info, 'P');
+	check_no_item(info, 'E');
+	check_no_item(info, 'P');
+	check_no_item(info, 'C');
+	check_map_reactangle(info);
 }
