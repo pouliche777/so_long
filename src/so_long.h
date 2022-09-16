@@ -6,7 +6,7 @@
 /*   By: slord <slord@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/06 17:14:16 by slord             #+#    #+#             */
-/*   Updated: 2022/08/02 16:06:23 by slord            ###   ########.fr       */
+/*   Updated: 2022/08/10 17:07:10 by slord            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@
 # include <stdio.h>
 # include <stdlib.h>
 # include <time.h>
+# include <dirent.h>
+# include <sys/types.h>
 # include "../libft/libft.h"
 
 typedef struct s_unit
@@ -38,6 +40,7 @@ typedef struct s_mlx
 	void		*player1;
 	char		**m;
 	int			nb_key;
+	int			nb_move;
 	int			map_h;
 	t_unit		monster;
 	t_unit		player;
@@ -68,5 +71,7 @@ void	check_doublons(t_mlx *info, char c);
 void	map_checker(t_mlx *info);
 void	check_bad_token(t_mlx *info);
 int		compare_ber(char *path, char *ber);
+void	start(t_mlx *info);
+void	check_dir(char *path);
 
 #endif

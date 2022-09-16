@@ -6,7 +6,7 @@
 /*   By: slord <slord@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/12 16:49:25 by slord             #+#    #+#             */
-/*   Updated: 2022/08/02 15:50:29 by slord            ###   ########.fr       */
+/*   Updated: 2022/08/10 17:13:20 by slord            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,6 +70,7 @@ int	map_height(char **argv)
 
 void	draw_map(t_mlx *info)
 {
+	put_img(info, info->floor, 'P');
 	put_img(info, info->wall, '1');
 	put_img(info, info->floor, '0');
 	put_img(info, info->key, 'C');

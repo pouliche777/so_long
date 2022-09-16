@@ -8,8 +8,7 @@ OBJS = $(SOURCES:$S%=$O%.o)
 
 LIB = libft/libft.a
 CC = gcc
-RM = rm -f
-RMDIR = rmdir
+RM = rm -rf
 CFLAGS = -Wall -Wextra -Werror
 
 NAME = so_long
@@ -33,7 +32,7 @@ $(NAME): $(OBJS)
 
 clean: 
 	@$(RM) $(OBJS)
-	@$(RMDIR) $O
+	@$(RM) $O
 	@echo "\033[0;31m Fichiers .o supprimés"
 
 fclean:	clean

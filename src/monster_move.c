@@ -6,7 +6,7 @@
 /*   By: slord <slord@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/27 14:57:18 by slord             #+#    #+#             */
-/*   Updated: 2022/08/02 13:59:52 by slord            ###   ########.fr       */
+/*   Updated: 2022/08/09 16:37:02 by slord            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,8 @@ void	validate_monster_1(t_mlx *info, int nb)
 	y = info->monster.y;
 	g = info->player.x;
 	nb = cheap_random(g);
+	info->nb_move++;
+	printf("%d\n", info->nb_move);
 	if (nb == 2)
 	{
 		if (info->m[x - 1][y] != '1' && info->m[x - 1][y] != 'E'

@@ -6,7 +6,7 @@
 /*   By: slord <slord@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/02 14:17:39 by slord             #+#    #+#             */
-/*   Updated: 2022/08/02 16:05:58 by slord            ###   ########.fr       */
+/*   Updated: 2022/08/09 16:42:15 by slord            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,7 +87,6 @@ int	game_over(t_mlx *info, int exit_code)
 void	map_checker(t_mlx *info)
 {
 	check_walls(info);
-	check_doublons(info, 'E');
 	check_doublons(info, 'P');
 	check_no_item(info, 'E');
 	check_no_item(info, 'P');
